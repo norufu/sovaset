@@ -1,0 +1,62 @@
+THE PLAN
+
+main goal : 
+  show setups for sova on all maps
+  wall bangs maybe
+  plants big maybe
+
+
+questions for enjoi
+-ideal way to take what I have and put it to the other maps tool, I could just copy and paste but would you use a component? have a mouseclick listener on the main thing?
+-should I be loading all this from a server, or some other way but not just having them in the public folder
+
+
+https://www.figma.com/
+can use figma to make svgs of the arrow paths/maps
+copy https://blitz.gg/valorant and https://sothatwemaybefree.com/
+
+project structure
+  main page
+    sova
+      haven
+        attack
+          sonar
+            format from - to
+            t spawn - A site
+          shock
+        defense
+          sonar
+            heaven - long
+          shock
+      split
+      etc
+    viper
+    etc
+
+
+individual setups need
+  data-id
+  data-location
+  data-type
+  data-bounces
+  data-charge
+  data-side
+maybe
+  data-difficulty
+  data-tooltip
+  data-hovered (if I can't fix the css hovered)
+
+
+component plan
+  for the lineups could pull from a file? 
+  have, new component(A site, B site, Elbow, etc) that creates a section for each specified, then it searches a file for those titles and auto fills in the images
+
+
+
+b-b-b-b-bonus ideas
+  interactable minimap for atk/def positions, hovering a position marked by a dot could show an arc to where it lands, allows quickly searching and clicking to see the setup
+  callout maps
+  wallbang spots
+
+
+  
