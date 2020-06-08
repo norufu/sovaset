@@ -60,3 +60,9 @@ b-b-b-b-bonus ideas
 
 
   
+
+
+
+  goal: turn haven > map.vue component 
+    - takes the map name as prop, 
+    - renders slot

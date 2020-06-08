@@ -1,24 +1,64 @@
 <template>
   <div>
-    <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-      <div class="">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar>
+    <ul class="sidebarList">
+      <li class="sidebarLi" @click="toggleSonar()">
+        <img id="sonar" src="../../public/UI/sonar.svg" />
+      </li>
+      <li class="sidebarLi" @click="toggleShock()">
+        <img id="shock" src="../../public/UI/shock.svg" />
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Sidebar',
-
-}
+  name: "Sidebar",
+  data() {
+    return {
+      filter: "sonar",
+    };
+  },
+  methods: {
+    toggleSonar() {
+      this.filter = "sonar";
+      document.getElementById("sonar").style.filter = "invert(1)";
+      document.getElementById("shock").style.filter = "invert(0)";
+      this.$emit("updateFilter", this.filter);
+    },
+    toggleShock() {
+      this.filter = "shock";
+      document.getElementById("sonar").style.filter = "invert(0)";
+      document.getElementById("shock").style.filter = "invert(1)";
+      this.$emit("updateFilter", this.filter);
+    },
+    toggleWallbang() {
+      console.log("wip");
+      this.$emit("updateFilter", this.filter);
+    },
+  },
+};
 </script>
 
 <style scoped>
-
+.sidebar {
+  position: absolute;
+  background: #b3b0aa;
+  border-right: 1px solid rgb(136, 136, 136);
+  height: 100%;
+  width: 100px;
+}
+li {
+  list-style-type: none;
+}
+.sidebarList {
+  padding-left: 0;
+  padding-top: 20px;
+}
+.sidebarLi {
+  padding-top: 10px;
+}
+#sonar {
+  filter: invert(1);
+}
 </style>

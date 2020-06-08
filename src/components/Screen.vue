@@ -1,19 +1,19 @@
 <template>
   <div class="screen bg">
-    <div class="ui">
-      <img class="uiIcon" @click="share()" src="../../public/UI/share.svg" />
-      <img class="uiIcon" @click="issue()" src="../../public/UI/report.svg" />
-      <img class="uiIcon" @click="close()" src="../../public/UI/close.svg" />
-    </div>
     <div class="pageWrapper">
+      <div class="ui">
+        <img class="uiIcon" @click="share()" src="../../public/UI/share.svg" />
+        <img class="uiIcon" @click="issue()" src="../../public/UI/report.svg" />
+        <img class="uiIcon" @click="close()" src="../../public/UI/close.svg" />
+      </div>
       <div class="contentWrapper">
         <div class="leftBox">
           <img class="pics" :src="images[0]" />
           <img class="pics" :src="images[1]" />
         </div>
         <div class="rightBox">
-          <img class="p3" :src="images[2]" />
-          <div class="shockBox">
+          <img class="picRight rightBoxContent" :src="images[2]" />
+          <div class="shockBox rightBoxContent">
             <img class="bar" :src="images[3]" />
             <img class="bounce" :src="images[4]" />
           </div>
@@ -56,61 +56,157 @@ export default {
 };
 </script>
 
+<style>
+@media (max-width: 1399px) {
+  html {
+    height: auto;
+  }
+}
+</style>
 <style scoped>
-.pageWrapper {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  border: 1px dashed black;
-}
-.contentWrapper {
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
-  border: 1px dashed blue;
-}
-.leftBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 100px;
-  border: 1px dashed #f0f;
-}
-.rightBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 100px;
-  border: 1px dashed #f0f;
-}
-.shockBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px dashed green;
-}
-.pics {
-  width: 320px;
-  height: 180px;
-}
-/* .bg {
-    position: absolute;
-    left:0px;
-    width:1920px;
-    height:1080px;
+@media (max-width: 1399px) {
+  html {
+    height: 10px;
+  }
+  .pageWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* border: 1px dashed black; */
+    background-image: url("../../public/UI/background.svg");
+    background-size: cover;
+  }
+  .contentWrapper {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    /* border: 1px dashed blue; */
+  }
+  .leftBox {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    /* border: 1px dashed #f0f; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .rightBox {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px dashed #f0f; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .shockBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px dashed green; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .rightBoxContent {
+    margin-bottom: 10px;
+  }
+  .pics {
+    width: 80%;
+    height: auto;
+    margin-bottom: 50px;
+    /* border: 1px solid rgb(143, 143, 143); */
+  }
+  .picRight {
+    width: 80%;
+    height: auto;
+    /* border: 1px solid rgb(143, 143, 143); */
   }
   .screen {
-    position: grid;
-
-    background-image: url("../../public/UI/background.svg")
+    display: flex;
+    height: 100%;
   }
+  .ui {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media (min-width: 1400px) {
+  .pageWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* border: 1px dashed black; */
+    background-image: url("../../public/UI/background.svg");
+    background-size: cover;
+  }
+  .contentWrapper {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    /* border: 1px dashed blue; */
+  }
+  .leftBox {
+    height: 642px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* padding: 100px; */
+    /* border: 1px dashed #f0f; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .rightBox {
+    height: 642px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* padding: 100px; */
+    /* border: 1px dashed #f0f; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .shockBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px dashed green; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .rightBoxContent {
+    margin-bottom: 10px;
+  }
+  .pics {
+    width: 518px;
+    height: 291px;
+    margin-bottom: 50px;
+    border: 1px solid rgb(143, 143, 143);
+  }
+  .picRight {
+    border: 1px solid rgb(143, 143, 143);
+  }
+  .screen {
+    display: flex;
+    height: 100%;
+  }
+  .ui {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+/*
+
   .p1 {
     position: absolute;
     left:3%;
@@ -164,7 +260,7 @@ export default {
     float: right;
     margin-right: 25px;
     margin-top: 5px;
-    background-color:rgba(0, 0, 0, 0) 
+    background-color:rgba(0, 0, 0, 0)
   }
 */
 </style>

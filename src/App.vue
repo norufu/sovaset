@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
-
+    <Navbar id="nav" />
     <router-view />
   </div>
 </template>
@@ -19,8 +18,15 @@ export default {
 
 <style>
 html {
+  height: calc(100% - 56px);
   background-color: #ece9e1;
 }
+body {
+  background-color: #ece9e1;
+  height: 100%;
+  /* height: calc(100% - 56px); */
+}
+
 div {
   background-color: #ece9e1;
 }
@@ -30,5 +36,6 @@ div {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
 </style>
