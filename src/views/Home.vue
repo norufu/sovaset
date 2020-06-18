@@ -1,13 +1,22 @@
 <template>
-  <div class = "home">
-    <button class = 'split mapButton' @click="()=>$router.push('Split')">Split</button>
-    <button class = 'haven mapButton' @click="()=>$router.push('Haven')">Haven</button>
-    <button class = 'bind mapButton' @click="()=>$router.push('Bind')">Bind</button>
+  <div class="home">
+    <button
+      class="split mapButton"
+      @click="() => $router.push('Split')"
+    ></button>
+    <button
+      class="haven mapButton"
+      @click="() => $router.push('Haven')"
+    ></button>
+    <button class="bind mapButton" @click="() => $router.push('Bind')"></button>
+    <button
+      class="ascent mapButton"
+      @click="() => $router.push('ascent')"
+    ></button>
 
     <!-- <button class = "sova agentButton" ></button>
     <button class = "cypher agentButton" ></button>
     <button class = "viper agentButton" ></button> -->
-
   </div>
 </template>
 
@@ -15,30 +24,42 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home',
-  components: {
-    
-  }
-}
+  name: "Home",
+  components: {},
+};
 </script>
 
 <style>
+.home {
+  background-color: rgba(0, 0, 0, 0);
+}
 .mapButton {
   background-size: 100%;
-  width: 150px;
-  height: 150px;
+  width: 600px;
+  height: 350px;
   cursor: pointer;
   margin: 30px;
   border-radius: 5px;
-  border: solid 1px black;
+  border: 1px solid rgb(143, 143, 143);
 }
-.sova {
-  background-image: url("../../public/agents/sovaFace.png");
+.split {
+  background-image: url("../../public/UI/split_cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.viper {
-  background-image: url("../../public/agents/viperFace.png");
+.bind {
+  background-image: url("../../public/UI/bind_cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.cypher {
-  background-image: url("../../public/agents/cypherFace.png");
+.haven {
+  background-image: url("../../public/UI/haven_cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ascent {
+  background-image: url("../../public/UI/ascent_cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>

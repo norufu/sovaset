@@ -1,22 +1,55 @@
 <template>
   <div class="screen bg">
     <div class="pageWrapper">
-      <div class="ui">
-        <img class="uiIcon" @click="share()" src="../../public/UI/share.svg" />
-        <img class="uiIcon" @click="issue()" src="../../public/UI/report.svg" />
-        <img class="uiIcon" @click="close()" src="../../public/UI/close.svg" />
-      </div>
       <div class="contentWrapper">
         <div class="leftBox">
           <img class="pics" :src="images[0]" />
           <img class="pics" :src="images[1]" />
         </div>
         <div class="rightBox">
-          <img class="picRight rightBoxContent" :src="images[2]" />
-          <div class="shockBox rightBoxContent">
-            <img class="bar" :src="images[3]" />
-            <img class="bounce" :src="images[4]" />
+          <div class="rightImageDiv">
+            <img
+              v-if="drawState == true"
+              class="picRight rightBoxContent"
+              :src="images[2]"
+            />
+            <img
+              v-if="drawState == false"
+              class="picRight rightBoxContent"
+              :src="images[3]"
+            />
+
+            <span class="imageIcons">
+              <img
+                @click="toggleDraw()"
+                class="drawIcon icon rightBoxContent"
+                src="../../public/UI/draw_icon.svg"
+              />
+              <img
+                @click="toggleInfo()"
+                class="infoIcon icon rightBoxContent"
+                src="../../public/UI/information_icon.svg"
+              />
+            </span>
+
+            <span v-if="showTip == true" class="tip">
+              <p>
+                {{ instructions }}
+              </p>
+            </span>
           </div>
+
+          <div class="shockBox rightBoxContent">
+            <img class="bar" :src="images[4]" />
+            <img class="bounce" :src="images[5]" />
+          </div>
+        </div>
+        <div class="ui">
+          <img
+            class="uiIcon icon"
+            @click="close()"
+            src="../../public/UI/close.svg"
+          />
         </div>
       </div>
     </div>
@@ -35,10 +68,18 @@ export default {
     images: {
       type: Array,
     },
+    location: {
+      type: String,
+    },
+    instructions: {
+      type: String,
+    },
   },
   data() {
     return {
       imgs: [],
+      drawState: false,
+      showTip: false,
     };
   },
   methods: {
@@ -52,6 +93,23 @@ export default {
     share() {
       console.log("wip share");
     },
+    toggleDraw() {
+      console.log(this.drawState);
+      if (this.drawState == true) {
+        this.drawState = false;
+        console.log("yes");
+      } else {
+        this.drawState = true;
+      }
+    },
+    toggleInfo() {
+      if (this.showTip == true) {
+        this.showTip = false;
+      } else {
+        this.showTip = true;
+      }
+      console.log(this.instructions);
+    },
   },
 };
 </script>
@@ -64,6 +122,9 @@ export default {
 }
 </style>
 <style scoped>
+.icon {
+  cursor: pointer;
+}
 @media (max-width: 1399px) {
   html {
     height: 10px;
@@ -108,8 +169,18 @@ export default {
     /* border: 1px dashed #f0f; */
     background-color: rgba(0, 0, 0, 0);
   }
+  .rightImageDiv {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .rightImageDiv .imageIcons {
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+  }
   .shockBox {
     display: flex;
+    width: 80%;
     flex-direction: column;
     justify-content: center;
     /* border: 1px dashed green; */
@@ -134,7 +205,59 @@ export default {
     height: 100%;
   }
   .ui {
+    position: absolute;
+    height: calc(97% - 56px);
+    top: 150px;
+    left: 93%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
     background-color: rgba(0, 0, 0, 0);
+  }
+  .uiIcon {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
+  }
+  .tip {
+    position: absolute;
+    bottom: 50%;
+    width: 300px;
+    left: 11%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20%;
+  }
+  .tip p {
+    color: white;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .ui {
+    position: absolute;
+    height: calc(97% - 56px);
+    top: 80px;
+    left: 93%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .tip {
+    position: absolute;
+    bottom: 50%;
+    width: 300px;
+    left: 11%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20%;
+  }
+  .tip p {
+    color: white;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1400px) {
@@ -165,18 +288,47 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin-left: 50px;
     /* padding: 100px; */
     /* border: 1px dashed #f0f; */
     background-color: rgba(0, 0, 0, 0);
   }
   .rightBox {
     height: 642px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
     /* padding: 100px; */
     /* border: 1px dashed #f0f; */
     background-color: rgba(0, 0, 0, 0);
+  }
+  .rightImageDiv {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .rightImageDiv .imageIcons {
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+  }
+  .tip {
+    position: absolute;
+    bottom: 50%;
+    width: 300px;
+    left: 11%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20%;
+  }
+  .tip p {
+    color: white;
+    margin-bottom: 0;
   }
   .shockBox {
     display: flex;
@@ -195,6 +347,8 @@ export default {
     border: 1px solid rgb(143, 143, 143);
   }
   .picRight {
+    width: 80%;
+    height: auto;
     border: 1px solid rgb(143, 143, 143);
   }
   .screen {
@@ -202,7 +356,20 @@ export default {
     height: 100%;
   }
   .ui {
+    position: absolute;
+    height: calc(97% - 56px);
+    /* top: calc(10% - 56px); */
+    left: 97%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
     background-color: rgba(0, 0, 0, 0);
+  }
+  .uiIcon {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
   }
 }
 /*

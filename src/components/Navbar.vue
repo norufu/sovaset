@@ -3,9 +3,12 @@
     <b-navbar class="navbar-custom shadow-sm" toggleable="lg">
       <b-navbar-brand to="/" href="#">SS</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="navItems" href="#">Characters</b-nav-item>
-        <b-nav-item class="navItems" href="#">Wallbangs</b-nav-item>
-        <b-nav-item class="navItems" href="#">Plants</b-nav-item>
+        <b-nav-item
+          class="navItems"
+          @click="() => $router.push('About')"
+          href="#"
+          >Contact</b-nav-item
+        >
       </b-navbar-nav>
     </b-navbar>
   </div>

@@ -19,16 +19,16 @@ export default {
 <style>
 html {
   height: calc(100% - 56px);
-  background-color: #ece9e1;
+  background-color: #1f374e;
 }
 body {
-  background-color: #ece9e1;
+  background-color: #1f374e;
   height: 100%;
   /* height: calc(100% - 56px); */
 }
 
 div {
-  background-color: #ece9e1;
+  background-color: #1f374e;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

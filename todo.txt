@@ -6,10 +6,19 @@ main goal :
   plants big maybe
 
 
-questions for enjoi
--ideal way to take what I have and put it to the other maps tool, I could just copy and paste but would you use a component? have a mouseclick listener on the main thing?
--should I be loading all this from a server, or some other way but not just having them in the public folder
+before release  
+  -fix map svg issue CHECK?
+  -fix UI on screens   CHECK
+  -on hover for <g> elements CHECK 
+  -images for main page buttons CHECK
+  -CONTENT  CHECK
+  -logo and name lol
+  -about  CHECK
+  -figure out a background/sidebar colour CHECK?
 
+  bugs
+  Clicking character icon or sonar icon doesn't load the screen CHECK
+  opening a shock screen then closing results in sidebar being on sonar not shock. May have to pass in the current filter on load to the screen
 
 https://www.figma.com/
 can use figma to make svgs of the arrow paths/maps
