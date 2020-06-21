@@ -105,14 +105,14 @@ p {
   font-size: 20px;
   background-color: rgba(0, 0, 0, 0);
 }
+html {
+  height: auto;
+}
 /* .pics {
   width: 725px !important;
   height: 408px !important;
 } */
 @media (max-width: 1459px) {
-  html {
-    height: auto;
-  }
 }
 </style>
 <style scoped>
@@ -120,13 +120,18 @@ p {
   cursor: pointer;
 }
 @media (max-width: 1459px) {
-  /* html {
-    height: 10px;
-  } */
+  #split {
+    height: auto;
+  }
+  html {
+    height: auto;
+  }
   .pageWrapper {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -194,11 +199,11 @@ p {
   .picRight {
     width: 80%;
     height: auto;
-    /* border: 1px solid rgb(143, 143, 143); */
+    border: 1px solid rgb(143, 143, 143);
   }
   .screen {
     display: flex;
-    height: 100%;
+    height: auto;
   }
   .ui {
     position: absolute;
@@ -254,6 +259,9 @@ p {
   }
 }
 @media (min-width: 992px) {
+  html {
+    height: auto;
+  }
   .ui {
     position: absolute;
     height: calc(97% - 56px);

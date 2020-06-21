@@ -398,14 +398,12 @@ export default {
 
 <style>
 #split {
-  height: 100%;
   width: 100%;
+  height: 100%;
   /* background-image: url("../../public/UI/background.svg");
   background-size: cover; */
 }
-html {
-  height: 100%;
-}
+
 .lineupDiv {
   height: 100%;
 }
