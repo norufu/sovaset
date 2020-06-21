@@ -189,7 +189,7 @@ p {
     width: 80%;
     height: auto;
     margin-bottom: 50px;
-    /* border: 1px solid rgb(143, 143, 143); */
+    border: 1px solid rgb(143, 143, 143);
   }
   .picRight {
     width: 80%;
@@ -411,11 +411,11 @@ p {
   .rightBoxContent {
     margin-bottom: 10px;
   }
-  /* .pics {
-    width: 725px !important;
-    height: 408px !important;
+  .pics {
+    width: 725px;
+    height: 408px;
     border: 1px solid rgb(143, 143, 143);
-  } */
+  }
   .p1 {
     margin-bottom: 34px;
   }
