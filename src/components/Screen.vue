@@ -3,21 +3,13 @@
     <div class="pageWrapper">
       <div class="contentWrapper">
         <div class="leftBox">
-          <img class="pics" :src="images[0]" />
-          <img class="pics" :src="images[1]" />
+          <img width="725" height="408px" class="pics p1" :src="images[0]" />
+          <img width="725" height="408px" class="pics" :src="images[1]" />
         </div>
         <div class="rightBox">
           <div class="rightImageDiv">
-            <img
-              v-if="drawState == true"
-              class="picRight rightBoxContent"
-              :src="images[2]"
-            />
-            <img
-              v-if="drawState == false"
-              class="picRight rightBoxContent"
-              :src="images[3]"
-            />
+            <img v-if="drawState == true" class="picRight rightBoxContent" :src="images[2]" />
+            <img v-if="drawState == false" class="picRight rightBoxContent" :src="images[3]" />
 
             <span class="imageIcons">
               <img
@@ -25,32 +17,25 @@
                 class="drawIcon icon rightBoxContent"
                 src="../../public/UI/draw_icon.svg"
               />
-              <img
-                @click="toggleInfo()"
-                class="infoIcon icon rightBoxContent"
-                src="../../public/UI/information_icon.svg"
-              />
             </span>
 
             <span v-if="showTip == true" class="tip">
-              <p>
-                {{ instructions }}
-              </p>
+              <p>{{ instructions }}</p>
             </span>
           </div>
-
-          <div class="shockBox rightBoxContent">
-            <img class="bar" :src="images[4]" />
-            <img class="bounce" :src="images[5]" />
+          <div class="infoBox">
+            <div class="shockBox rightBoxContent">
+              <img class="bar" :src="images[4]" />
+              <img class="bounce" :src="images[5]" />
+            </div>
+            <div class="tipBox">
+              <p>{{ instructions }}</p>
+            </div>
           </div>
         </div>
-        <div class="ui">
-          <img
-            class="uiIcon icon"
-            @click="close()"
-            src="../../public/UI/close.svg"
-          />
-        </div>
+      </div>
+      <div class="ui">
+        <img class="uiIcon icon" @click="close()" src="../../public/UI/close.svg" />
       </div>
     </div>
     <!-- <img class = 'bg' src="../../public/background.svg"> -->
@@ -66,20 +51,20 @@ export default {
   name: "Screen",
   props: {
     images: {
-      type: Array,
+      type: Array
     },
     location: {
-      type: String,
+      type: String
     },
     instructions: {
-      type: String,
-    },
+      type: String
+    }
   },
   data() {
     return {
       imgs: [],
       drawState: false,
-      showTip: false,
+      showTip: false
     };
   },
   methods: {
@@ -109,13 +94,22 @@ export default {
         this.showTip = true;
       }
       console.log(this.instructions);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style>
-@media (max-width: 1399px) {
+p {
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* .pics {
+  width: 725px !important;
+  height: 408px !important;
+} */
+@media (max-width: 1459px) {
   html {
     height: auto;
   }
@@ -125,10 +119,10 @@ export default {
 .icon {
   cursor: pointer;
 }
-@media (max-width: 1399px) {
-  html {
+@media (max-width: 1459px) {
+  /* html {
     height: 10px;
-  }
+  } */
   .pageWrapper {
     width: 100%;
     height: 100%;
@@ -179,10 +173,12 @@ export default {
     left: 10%;
   }
   .shockBox {
+    width: auto;
     display: flex;
-    width: 80%;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin-top: 20px;
     /* border: 1px dashed green; */
     background-color: rgba(0, 0, 0, 0);
   }
@@ -233,6 +229,29 @@ export default {
     color: white;
     margin-bottom: 0;
   }
+  .infoBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    background-color: #091118;
+    border: 1px solid rgb(143, 143, 143);
+  }
+  .tipBox {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 25px;
+
+    /* border: 1px dashed green; */
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 @media (min-width: 992px) {
   .ui {
@@ -259,15 +278,41 @@ export default {
     color: white;
     margin-bottom: 0;
   }
+  .infoBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    background-color: #091118;
+    border: 1px solid rgb(143, 143, 143);
+  }
+  .tipBox {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 25px;
+
+    /* border: 1px dashed green; */
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1460px) {
+  div {
+    background-color: rgba(0, 0, 0, 0);
+  }
   .pageWrapper {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
     /* border: 1px dashed black; */
     background-image: url("../../public/UI/background.svg");
     background-size: cover;
@@ -275,35 +320,36 @@ export default {
   .contentWrapper {
     background-color: rgba(0, 0, 0, 0);
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     align-content: center;
     /* border: 1px dashed blue; */
   }
   .leftBox {
-    height: 642px;
+    height: 806px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    margin-left: 50px;
+    margin-top: 40px;
+    margin-left: 25px;
     /* padding: 100px; */
     /* border: 1px dashed #f0f; */
     background-color: rgba(0, 0, 0, 0);
   }
   .rightBox {
-    height: 642px;
+    height: 806px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-
+    margin-top: 40px;
     /* padding: 100px; */
     /* border: 1px dashed #f0f; */
     background-color: rgba(0, 0, 0, 0);
@@ -314,8 +360,8 @@ export default {
   }
   .rightImageDiv .imageIcons {
     position: absolute;
-    bottom: 0px;
-    left: 10%;
+    bottom: 1%;
+    left: 3%;
   }
   .tip {
     position: absolute;
@@ -330,25 +376,58 @@ export default {
     color: white;
     margin-bottom: 0;
   }
-  .shockBox {
+  .infoBox {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: row;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    background-color: #091118;
+    border: 1px solid rgb(143, 143, 143);
+  }
+  .shockBox {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin-top: 20px;
+    /* border: 1px dashed green; */
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .tipBox {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 25px;
+
     /* border: 1px dashed green; */
     background-color: rgba(0, 0, 0, 0);
   }
   .rightBoxContent {
     margin-bottom: 10px;
   }
-  .pics {
-    width: 518px;
-    height: 291px;
-    margin-bottom: 50px;
+  /* .pics {
+    width: 725px !important;
+    height: 408px !important;
     border: 1px solid rgb(143, 143, 143);
+  } */
+  .p1 {
+    margin-bottom: 34px;
+  }
+  .rightImageDiv {
+    margin-bottom: 25px;
   }
   .picRight {
-    width: 80%;
+    width: 95%;
     height: auto;
+    /* width: 1085px;
+    height: 611px; */
+    /* height: auto; */
     border: 1px solid rgb(143, 143, 143);
   }
   .screen {
@@ -367,6 +446,7 @@ export default {
     background-color: rgba(0, 0, 0, 0);
   }
   .uiIcon {
+    margin-top: 18px;
     margin-bottom: 10px;
     height: 30px;
     width: 30px;

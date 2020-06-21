@@ -10,14 +10,14 @@
       ref="sidebar"
       class="sidebar columns"
     ></sidebar>
-    <Map v-if="state == 'map'" :mapName="'bind'">
-      <div class="mapDiv col-10" id="mapDrawings" ref="mapDiv" style="transform: scale(1)">
-        <img class="mapParts" src="../../public/bindMini.png" />
+    <div v-if="state == 'map'" class="mapDiv">
+      <Map v-if="state == 'map'" :mapName="'bind'">
+        <img class="mapParts scaleDown" src="../../public/bindMini.png" />
 
         <!-- svg here -->
         <svg
           @click="clickLineup($event)"
-          class="mapParts"
+          class="mapParts scaleDown"
           width="1030"
           height="1024"
           viewBox="0 0 1030 1024"
@@ -534,8 +534,8 @@
             </clipPath>
           </defs>
         </svg>
-      </div>
-    </Map>
+      </Map>
+    </div>
   </div>
 </template>
 
@@ -545,6 +545,7 @@
 import Screen from "../components/Screen.vue";
 import Map from "../components/Map.vue";
 import Sidebar from "../components/Sidebar.vue";
+import { MapService } from "../services/MapService.js";
 
 export default {
   name: "Bind",
@@ -569,75 +570,10 @@ export default {
     closeLineup() {
       this.state = "map";
     },
-    loadPics() {
-      let imgs = [];
-      imgs.push(
-        require("../../public/arrows/bind/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_setup.png")
-      );
-      imgs.push(
-        require("../../public/arrows/bind/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_landing.png")
-      );
-      imgs.push(
-        require("../../public/arrows/bind/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_lineup_d.png")
-      );
-      imgs.push(
-        require("../../public/arrows/bind/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_lineup.png")
-      );
-      // console.log(this.imgs);
-      switch (this.currentCharge) {
-        case "1":
-          imgs.push(require("../../public/UI/charge bar 1.svg"));
-          break;
-        case "2":
-          imgs.push(require("../../public/UI/charge bar 2.svg"));
-          break;
-        case "3":
-          imgs.push(require("../../public/UI/charge bar 3.svg"));
-          break;
-        default:
-          imgs.push(require("../../public/UI/charge bar max.svg"));
-      }
-      switch (this.currentBounce) {
-        case "1":
-          imgs.push(require("../../public/UI/bounce1.svg"));
-          break;
-        case "2":
-          imgs.push(require("../../public/UI/bounce2.svg"));
-          break;
-        default:
-          imgs.push(require("../../public/UI/bounce0.svg"));
-      }
-      console.log(imgs);
-      return imgs;
-    },
     clickLineup(e) {
-      if (!e.target.closest("g").matches(".lineups")) return; // check if clicking a lineup
-      console.log(e.target.closest("g").getAttribute("data-id"));
-      let current = e.target.closest("g");
-      this.currentLineup = current.getAttribute("data-id");
-      this.currentCharge = current.getAttribute("data-charge");
-      this.currentBounce = current.getAttribute("data-bounces");
-      this.currentInstructions = current.getAttribute("data-instructions");
-      //hide map, show screens
-
-      // this.$refs.lineupScreen.loadPics(this.loadPics());
-      this.imgs = this.loadPics();
+      let screenData = MapService.clickLineup(e, "bind");
+      this.imgs = screenData.imgs;
+      this.currentInstructions = screenData.instructions;
       this.state = "screen";
     },
     updateFilter(newFilter) {
@@ -658,12 +594,23 @@ export default {
 #bind {
   height: 100%;
   width: 100%;
+  /* background-image: url("../../public/UI/background.svg");
+  background-size: cover; */
 }
 .lineupDiv {
   height: 100%;
 }
-g:hover line {
-  stroke: black;
-  stroke-width: 4;
+html {
+  height: 100%;
+}
+.mapDiv {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.scaleDown {
+  transform: scale(0.8);
 }
 </style>

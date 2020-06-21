@@ -10,12 +10,12 @@
       ref="sidebar"
       class="sidebar columns"
     ></sidebar>
-    <Map v-if="state == 'map'" :mapName="'haven'">
-      <div class="mapDiv col-10" id="mapDrawings" ref="mapDiv" style="transform: scale(1)">
-        <img class="mapParts" src="../../public/havenMap.svg" />
+    <div v-if="state == 'map'" class="mapDiv">
+      <Map :mapName="'haven'">
+        <img class="mapParts scaleDown" src="../../public/havenMap.svg" />
         <svg
           @click="clickLineup($event)"
-          class="mapParts"
+          class="mapParts scaleDown"
           width="1024"
           height="1024"
           viewBox="0 0 1024 1024"
@@ -365,110 +365,9 @@
             <circle id="Ellipse 1_11" cx="352.5" cy="348.5" r="2.5" fill="#DF2E2E" />
             <circle id="Ellipse 1_12" cx="341" cy="329" r="6" fill="#2EDF60" />
           </g>
-
-          <!-- <g class="lineups">
-            <line
-              x1="8.73648"
-              y1="410.192"
-              x2="262.737"
-              y2="13.1916"
-              stroke="#28BA51"
-              stroke-width="3"
-            />
-            <circle cx="6" cy="415" r="6" fill="#2EDF60" />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M266.5 15C270.642 15 274 11.6421 274 7.5C274 3.35786 270.642 0 266.5 0C262.358 0 259 3.35786 259 7.5C259 11.6421 262.358 15 266.5 15ZM266.5 13.75C269.952 13.75 272.75 10.9518 272.75 7.5C272.75 4.04822 269.952 1.25 266.5 1.25C263.048 1.25 260.25 4.04822 260.25 7.5C260.25 10.9518 263.048 13.75 266.5 13.75Z"
-              fill="#6468B9"
-            />
-            <path
-              d="M271.5 7.5C271.5 10.2614 269.261 12.5 266.5 12.5C263.739 12.5 261.5 10.2614 261.5 7.5C261.5 4.73858 263.739 2.5 266.5 2.5C269.261 2.5 271.5 4.73858 271.5 7.5Z"
-              fill="#6468B9"
-            />
-          </g>-->
-
-          <!-- <g
-            v-if="filter == 'sonar'"
-            class="lineups"
-            data-id="1"
-            data-location="ct spawn to A"
-            data-type="sonar"
-            data-bounces="0"
-            data-charge="1"
-            data-side="CT"
-            data-difficulty="1"
-          >
-            <circle cx="147" cy="507" r="6" fill="#77DEFF" />
-            <line
-              x1="145.736"
-              y1="506.192"
-              x2="406.736"
-              y2="98.1917"
-              stroke="#77DEFF"
-              stroke-width="3"
-            />
-            <path
-              d="M407.5 90L414.861 102.75H400.139L407.5 90Z"
-              fill="#3D9A35"
-            />
-          </g>
-
-          <g>
-            <path
-              id="Line 1"
-              d="M10 9L297.529 240.167"
-              stroke="#24A749"
-              stroke-width="3"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M302.5 252C306.642 252 310 248.642 310 244.5C310 240.358 306.642 237 302.5 237C298.358 237 295 240.358 295 244.5C295 248.642 298.358 252 302.5 252ZM302.5 250.75C305.952 250.75 308.75 247.952 308.75 244.5C308.75 241.048 305.952 238.25 302.5 238.25C299.048 238.25 296.25 241.048 296.25 244.5C296.25 247.952 299.048 250.75 302.5 250.75Z"
-              fill="#6468B9"
-            />
-            <path
-              d="M307.5 244.5C307.5 247.261 305.261 249.5 302.5 249.5C299.739 249.5 297.5 247.261 297.5 244.5C297.5 241.739 299.739 239.5 302.5 239.5C305.261 239.5 307.5 241.739 307.5 244.5Z"
-              fill="#6468B9"
-            />
-
-            <circle id="Ellipse 1" cx="6" cy="6" r="6" fill="#2EDF60" />
-          </g>-->
-
-          <!-- 
-          <g
-            v-if="filter == 'shock'"
-            class="lineups"
-            data-id="2"
-            data-location="a long to garden"
-            data-type="shock"
-            data-bounces="0"
-            data-charge="1"
-            data-side="CT"
-            data-difficulty="2"
-          >
-            <line
-              x1="505.942"
-              y1="125.833"
-              x2="801.942"
-              y2="364.833"
-              stroke="#77DEFF"
-              stroke-width="3"
-            />
-            <circle cx="505" cy="127" r="6" fill="#77DEFF" />
-            <path
-              d="M800.5 357L807.861 369.75H793.139L800.5 357Z"
-              fill="#3D9A35"
-            />
-            <defs>
-              <clipPath id="clip0">
-                <rect x="141" y="90" width="268" height="427" fill="white" />
-              </clipPath>
-            </defs>
-          </g>-->
         </svg>
-      </div>
-    </Map>
+      </Map>
+    </div>
   </div>
 </template>
 
@@ -478,6 +377,7 @@
 import Screen from "../components/Screen.vue";
 import Map from "../components/Map.vue";
 import Sidebar from "../components/Sidebar.vue";
+import { MapService } from "../services/MapService.js";
 
 export default {
   name: "Haven",
@@ -501,76 +401,10 @@ export default {
     closeLineup() {
       this.state = "map";
     },
-    loadPics() {
-      let imgs = [];
-      imgs.push(
-        require("../../public/arrows/haven/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_setup.png")
-      );
-      imgs.push(
-        require("../../public/arrows/haven/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_landing.png")
-      );
-      imgs.push(
-        require("../../public/arrows/haven/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_lineup_d.png")
-      );
-      imgs.push(
-        require("../../public/arrows/haven/" +
-          this.currentLineup +
-          "/" +
-          this.currentLineup +
-          "_lineup.png")
-      );
-      // console.log(this.imgs);
-      switch (this.currentCharge) {
-        case "1":
-          imgs.push(require("../../public/UI/charge bar 1.svg"));
-          break;
-        case "2":
-          imgs.push(require("../../public/UI/charge bar 2.svg"));
-          break;
-        case "3":
-          imgs.push(require("../../public/UI/charge bar 3.svg"));
-          break;
-        default:
-          imgs.push(require("../../public/UI/charge bar max.svg"));
-      }
-      switch (this.currentBounce) {
-        case "1":
-          imgs.push(require("../../public/UI/bounce1.svg"));
-          break;
-        case "2":
-          imgs.push(require("../../public/UI/bounce2.svg"));
-          break;
-        default:
-          imgs.push(require("../../public/UI/bounce0.svg"));
-      }
-      console.log(imgs);
-      return imgs;
-    },
     clickLineup(e) {
-      if (!e.target.closest("g").matches(".lineups")) return; // check if clicking a lineup
-      console.log(e.target.closest("g").getAttribute("data-id"));
-      let current = e.target.closest("g");
-      this.currentLineup = current.getAttribute("data-id");
-      this.currentCharge = current.getAttribute("data-charge");
-      this.currentBounce = current.getAttribute("data-bounces");
-      this.currentInstructions = current.getAttribute("data-instructions");
-
-      //hide map, show screens
-
-      // this.$refs.lineupScreen.loadPics(this.loadPics());
-      this.imgs = this.loadPics();
+      let screenData = MapService.clickLineup(e, "haven");
+      this.imgs = screenData.imgs;
+      this.currentInstructions = screenData.instructions;
       this.state = "screen";
     },
     updateFilter(newFilter) {
@@ -594,7 +428,20 @@ export default {
   /* background-image: url("../../public/UI/background.svg");
   background-size: cover; */
 }
+html {
+  height: 100%;
+}
 .lineupDiv {
   height: 100%;
+}
+.mapDiv {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.scaleDown {
+  transform: scale(0.8);
 }
 </style>

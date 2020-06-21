@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="mapCompDiv">
     <slot></slot>
   </div>
 </template>
@@ -9,8 +9,8 @@ export default {
   name: "Map",
   props: {
     mapName: {
-      type: String,
-    },
+      type: String
+    }
   },
   methods: {
     zoom(dir) {
@@ -27,8 +27,8 @@ export default {
         newScale = curScale + 0.1;
         div.style.transform = "scale(" + newScale + ")";
       }
-    },
-  },
+    }
+  }
   // window.addEventListener('mousewheel', (e) => { // disabling cause my zooming sucks and is annoying
   // let wDelta = e.wheelDelta < 0 ? 'down' : 'up';
   // this.zoom(wDelta)
@@ -38,17 +38,24 @@ export default {
 </script>
 
 <style scoped>
+#mapCompDiv {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 .mapParts {
   position: absolute;
   opacity: 1;
-  transform: scale(0.8);
-  left: 0%;
+  /* left: 0%; */
 }
 #mapDrawings {
   /* height: 100px; */
   /* width: 50%; */
-  top: -50px;
-  left: 16%;
+  /* top: -50px;
+  left: 16%; */
   /* left: 16%; */
 }
 .lineups {

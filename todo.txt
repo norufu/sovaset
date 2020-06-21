@@ -1,46 +1,32 @@
 THE PLAN
 
-main goal : 
-  show setups for sova on all maps
-  wall bangs maybe
-  plants big maybe
+todo
 
 
-before release  
+-sovasetups.com and logo
+-more CONTENT
+-fix bugs
+
+
+DONE
   -fix map svg issue CHECK?
   -fix UI on screens   CHECK
   -on hover for <g> elements CHECK 
   -images for main page buttons CHECK
   -CONTENT  CHECK
-  -logo and name lol
   -about  CHECK
   -figure out a background/sidebar colour CHECK?
+  -fix screens resize stuff CHECK
+  -change the mapname.vue files into one component, feed in a map to the structure component or something CHECK (made it a services file)
+  -rotate the maps if possible CHECK
 
   bugs
   Clicking character icon or sonar icon doesn't load the screen CHECK
-  opening a shock screen then closing results in sidebar being on sonar not shock. May have to pass in the current filter on load to the screen
+  opening a shock screen then closing results in sidebar being on sonar not shock. May have to pass in the current filter on load to the screen. same happens with attack/defense
 
 https://www.figma.com/
 can use figma to make svgs of the arrow paths/maps
 copy https://blitz.gg/valorant and https://sothatwemaybefree.com/
-
-project structure
-  main page
-    sova
-      haven
-        attack
-          sonar
-            format from - to
-            t spawn - A site
-          shock
-        defense
-          sonar
-            heaven - long
-          shock
-      split
-      etc
-    viper
-    etc
 
 
 individual setups need
@@ -50,28 +36,14 @@ individual setups need
   data-bounces
   data-charge
   data-side
-maybe
-  data-difficulty
+    data-difficulty
   data-tooltip
-  data-hovered (if I can't fix the css hovered)
-
-
-component plan
-  for the lineups could pull from a file? 
-  have, new component(A site, B site, Elbow, etc) that creates a section for each specified, then it searches a file for those titles and auto fills in the images
-
-
+maybe
 
 b-b-b-b-bonus ideas
   interactable minimap for atk/def positions, hovering a position marked by a dot could show an arc to where it lands, allows quickly searching and clicking to see the setup
   callout maps
   wallbang spots
+  plant spots
 
 
-  
-
-
-
-  goal: turn haven > map.vue component 
-    - takes the map name as prop, 
-    - renders slot
