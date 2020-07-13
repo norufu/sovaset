@@ -339,6 +339,365 @@
             <circle id="Ellipse 1_14" cx="702.5" cy="888.5" r="2.5" fill="#DF2E2E" />
             <circle id="Ellipse 1_15" cx="299.5" cy="682.5" r="2.5" fill="#DF2E2E" />
           </g>
+
+          <g
+            id="12"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="12"
+            data-location="A lobby to default"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Stand on the edge of the planter and put the top of your charge bar lined up with the blue light on the tower. The first tick of your charge bar with the beam."
+          >
+            <circle id="Ellipse 1_16" cx="561" cy="85" r="6" fill="#2EDF60" />
+            <path
+              id="Polygon 9"
+              d="M230.5 68.5L235.5 73.5L230.5 78.5L225.5 73.5L230.5 68.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_12"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M230.5 81C234.642 81 238 77.6421 238 73.5C238 69.3579 234.642 66 230.5 66C226.358 66 223 69.3579 223 73.5C223 77.6421 226.358 81 230.5 81ZM230.5 79.75C233.952 79.75 236.75 76.9518 236.75 73.5C236.75 70.0482 233.952 67.25 230.5 67.25C227.048 67.25 224.25 70.0482 224.25 73.5C224.25 76.9518 227.048 79.75 230.5 79.75Z"
+              fill="#6468B9"
+            />
+            <path id="Line 1_11" d="M556 85L237.001 73.9622" stroke="#24A749" stroke-width="3" />
+          </g>
+
+          <g
+            id="13"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="13"
+            data-location="A lobby to back of sign"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Standing on the step, line up with the edge of the planter. Line up the right tip of the shock dart icon with the corner of the roof as shown."
+          >
+            >
+            <circle id="Ellipse 1_17" cx="582" cy="95" r="6" fill="#2EDF60" />
+            <path
+              id="Polygon 9_2"
+              d="M274.5 36.5L279.5 41.5L274.5 46.5L269.5 41.5L274.5 36.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_13"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M274.5 49C278.642 49 282 45.6421 282 41.5C282 37.3579 278.642 34 274.5 34C270.358 34 267 37.3579 267 41.5C267 45.6421 270.358 49 274.5 49ZM274.5 47.75C277.952 47.75 280.75 44.9518 280.75 41.5C280.75 38.0482 277.952 35.25 274.5 35.25C271.048 35.25 268.25 38.0482 268.25 41.5C268.25 44.9518 271.048 47.75 274.5 47.75Z"
+              fill="#6468B9"
+            />
+            <path id="Line 1_12" d="M577 94L281 43" stroke="#24A749" stroke-width="3" />
+          </g>
+
+          <g
+            id="14"
+            v-if="filter == 'shock' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="14"
+            data-location="B CT to Default"
+            datatype="shock"
+            data-bounces="1"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Stand in the corner and aim slightly below the line on the wall in the center of the dark spot."
+          >
+            >
+            <path id="Line 1_13" d="M286 795L204 727" stroke="#24A749" stroke-width="3" />
+            <path id="Line 2_4" d="M144 773L202 726" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_18" cx="141" cy="776" r="6" fill="#2EDF60" />
+            <path
+              id="Polygon 9_3"
+              d="M291.5 793.5L296.5 798.5L291.5 803.5L286.5 798.5L291.5 793.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_14"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M291.5 806C295.642 806 299 802.642 299 798.5C299 794.358 295.642 791 291.5 791C287.358 791 284 794.358 284 798.5C284 802.642 287.358 806 291.5 806ZM291.5 804.75C294.952 804.75 297.75 801.952 297.75 798.5C297.75 795.048 294.952 792.25 291.5 792.25C288.048 792.25 285.25 795.048 285.25 798.5C285.25 801.952 288.048 804.75 291.5 804.75Z"
+              fill="#6468B9"
+            />
+            <circle id="Ellipse 1_19" cx="202.5" cy="725.5" r="2.5" fill="#DF2E2E" />
+          </g>
+
+          <g
+            id="15"
+            v-if="filter == 'shock' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="15"
+            data-location="B CT to default"
+            datatype="shock"
+            data-bounces="2"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up so the left side of the doorway aligns with the second vertical line on the wall. There's a horizontal white line on the wall, put your crosshair near where that and the vertical line meet."
+          >
+            >
+            <path id="Line 1_14" d="M189 748L144 687" stroke="#24A749" stroke-width="3" />
+            <path id="Line 2_5" d="M190 748L202 727" stroke="#24A749" stroke-width="3" />
+            <path id="Line 3_3" d="M286 795L203 726" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_20" cx="141" cy="683" r="6" fill="#2EDF60" />
+            <circle id="Ellipse 1_21" cx="189.5" cy="748.5" r="2.5" fill="#DF2E2E" />
+            <circle id="Ellipse 1_22" cx="202.5" cy="725.5" r="2.5" fill="#DF2E2E" />
+            <path
+              id="Polygon 9_4"
+              d="M291.5 793.5L296.5 798.5L291.5 803.5L286.5 798.5L291.5 793.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_15"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M291.5 806C295.642 806 299 802.642 299 798.5C299 794.358 295.642 791 291.5 791C287.358 791 284 794.358 284 798.5C284 802.642 287.358 806 291.5 806ZM291.5 804.75C294.952 804.75 297.75 801.952 297.75 798.5C297.75 795.048 294.952 792.25 291.5 792.25C288.048 792.25 285.25 795.048 285.25 798.5C285.25 801.952 288.048 804.75 291.5 804.75Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="16"
+            v-if="filter == 'shock' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="16"
+            data-location="B heaven to default"
+            datatype="shock"
+            data-bounces="1"
+            data-charge="2"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Stand on the top step against the wall in heaven. Aim just left of the dark splotch on the wall."
+          >
+            >
+            <path id="Line 3_4" d="M288 793L229 720" stroke="#24A749" stroke-width="3" />
+            <path id="Line 2_6" d="M229 721L420 591" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_23" cx="229.5" cy="720.5" r="2.5" fill="#DF2E2E" />
+            <path
+              id="Polygon 9_5"
+              d="M291.5 793.5L296.5 798.5L291.5 803.5L286.5 798.5L291.5 793.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_16"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M291.5 806C295.642 806 299 802.642 299 798.5C299 794.358 295.642 791 291.5 791C287.358 791 284 794.358 284 798.5C284 802.642 287.358 806 291.5 806ZM291.5 804.75C294.952 804.75 297.75 801.952 297.75 798.5C297.75 795.048 294.952 792.25 291.5 792.25C288.048 792.25 285.25 795.048 285.25 798.5C285.25 801.952 288.048 804.75 291.5 804.75Z"
+              fill="#6468B9"
+            />
+            <circle id="Ellipse 1_24" cx="424" cy="588" r="6" fill="#2EDF60" />
+          </g>
+
+          <g
+            id="17"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="17"
+            data-location="Back site B to mid"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up with the rusted line on the metal piece against the wall. Look up and put the 0 on your bounce counter just above the right tip of the tower."
+          >
+            >
+            <path id="Line 2_7" d="M241 893L552.487 501.387" stroke="#24A749" stroke-width="3" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M556.5 504C560.642 504 564 500.642 564 496.5C564 492.358 560.642 489 556.5 489C552.358 489 549 492.358 549 496.5C549 500.642 552.358 504 556.5 504ZM556.5 502.75C559.952 502.75 562.75 499.952 562.75 496.5C562.75 493.048 559.952 490.25 556.5 490.25C553.048 490.25 550.25 493.048 550.25 496.5C550.25 499.952 553.048 502.75 556.5 502.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M561.5 496.5C561.5 499.261 559.261 501.5 556.5 501.5C553.739 501.5 551.5 499.261 551.5 496.5C551.5 493.739 553.739 491.5 556.5 491.5C559.261 491.5 561.5 493.739 561.5 496.5Z"
+              fill="#6468B9"
+            />
+            <circle id="Ellipse 1_25" cx="239" cy="895" r="6" fill="#2EDF60" />
+          </g>
+
+          <g
+            id="18"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="18"
+            data-location="B heaven to mid"
+            datatype="sonar"
+            data-bounces="1"
+            data-charge="3"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Stand where the floor panels make a T with the edge of heaven. Aim just above and left of the blue light."
+          >
+            >
+            <path id="Line 1_15" d="M386 858L325 698" stroke="#24A749" stroke-width="3" />
+            <path id="Line 2_8" d="M387 858L578.412 467.201" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_26" cx="324" cy="694" r="6" fill="#2EDF60" />
+            <circle id="Ellipse 1_27" cx="386.5" cy="858.5" r="2.5" fill="#DF2E2E" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M581.5 469C585.642 469 589 465.642 589 461.5C589 457.358 585.642 454 581.5 454C577.358 454 574 457.358 574 461.5C574 465.642 577.358 469 581.5 469ZM581.5 467.75C584.952 467.75 587.75 464.952 587.75 461.5C587.75 458.048 584.952 455.25 581.5 455.25C578.048 455.25 575.25 458.048 575.25 461.5C575.25 464.952 578.048 467.75 581.5 467.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M586.5 461.5C586.5 464.261 584.261 466.5 581.5 466.5C578.739 466.5 576.5 464.261 576.5 461.5C576.5 458.739 578.739 456.5 581.5 456.5C584.261 456.5 586.5 458.739 586.5 461.5Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="19"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="19"
+            data-location="B CT to market"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up with the doorway then look up. There are 3 small ^'s on the tooltip. Line the middle one up with the bottom of the edge of the window."
+          >
+            >
+            <path id="Line 1_16" d="M239 750L571 581" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_28" cx="235" cy="752" r="6" fill="#2EDF60" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M577.5 585C581.642 585 585 581.642 585 577.5C585 573.358 581.642 570 577.5 570C573.358 570 570 573.358 570 577.5C570 581.642 573.358 585 577.5 585ZM577.5 583.75C580.952 583.75 583.75 580.952 583.75 577.5C583.75 574.048 580.952 571.25 577.5 571.25C574.048 571.25 571.25 574.048 571.25 577.5C571.25 580.952 574.048 583.75 577.5 583.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M582.5 577.5C582.5 580.261 580.261 582.5 577.5 582.5C574.739 582.5 572.5 580.261 572.5 577.5C572.5 574.739 574.739 572.5 577.5 572.5C580.261 572.5 582.5 574.739 582.5 577.5Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="20"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="20"
+            data-location="B garage entrance to B lobby"
+            datatype="sonar"
+            data-bounces="2"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up with the doorway of garage. There are two little nubs on the cable, while crouching put your crosshair slightly below the left one and in line with the top one. Fire while crouching."
+          >
+            >
+            <path id="Line 1_17" d="M378 852L508 796" stroke="#24A749" stroke-width="3" />
+            <path id="Line 2_9" d="M508 795L443 762" stroke="#24A749" stroke-width="3" />
+            <path id="Line 3_5" d="M627 691L442 761" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_29" cx="374" cy="854" r="6" fill="#2EDF60" />
+            <circle id="Ellipse 1_30" cx="509.5" cy="795.5" r="2.5" fill="#DF2E2E" />
+            <circle id="Ellipse 1_31" cx="441.5" cy="761.5" r="2.5" fill="#DF2E2E" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M633.5 696C637.642 696 641 692.642 641 688.5C641 684.358 637.642 681 633.5 681C629.358 681 626 684.358 626 688.5C626 692.642 629.358 696 633.5 696ZM633.5 694.75C636.952 694.75 639.75 691.952 639.75 688.5C639.75 685.048 636.952 682.25 633.5 682.25C630.048 682.25 627.25 685.048 627.25 688.5C627.25 691.952 630.048 694.75 633.5 694.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M638.5 688.5C638.5 691.261 636.261 693.5 633.5 693.5C630.739 693.5 628.5 691.261 628.5 688.5C628.5 685.739 630.739 683.5 633.5 683.5C636.261 683.5 638.5 685.739 638.5 688.5Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="22"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="22"
+            data-location="A site to B lobby"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up with the center of the V on the back wall. Put the tip of the shock icon at the bottom left part of the crown on the building where the bush covers a bit."
+          >
+            >
+            <path id="Line 1_19" d="M661 705L276.425 14.7635" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_33" cx="274" cy="12" r="6" fill="#2EDF60" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M664.5 718C668.642 718 672 714.642 672 710.5C672 706.358 668.642 703 664.5 703C660.358 703 657 706.358 657 710.5C657 714.642 660.358 718 664.5 718ZM664.5 716.75C667.952 716.75 670.75 713.952 670.75 710.5C670.75 707.048 667.952 704.25 664.5 704.25C661.048 704.25 658.25 707.048 658.25 710.5C658.25 713.952 661.048 716.75 664.5 716.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M669.5 710.5C669.5 713.261 667.261 715.5 664.5 715.5C661.739 715.5 659.5 713.261 659.5 710.5C659.5 707.739 661.739 705.5 664.5 705.5C667.261 705.5 669.5 707.739 669.5 710.5Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="21"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="21"
+            data-location="A site to mid"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="4"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up with the center of the V on the back wall. Put the top of the right diamond touching the bottom of the white part of the building."
+          >
+            >
+            <path id="Line 1_18" d="M553 506L275.571 16.2428" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_32" cx="274" cy="12" r="6" fill="#2EDF60" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M556.5 519C560.642 519 564 515.642 564 511.5C564 507.358 560.642 504 556.5 504C552.358 504 549 507.358 549 511.5C549 515.642 552.358 519 556.5 519ZM556.5 517.75C559.952 517.75 562.75 514.952 562.75 511.5C562.75 508.048 559.952 505.25 556.5 505.25C553.048 505.25 550.25 508.048 550.25 511.5C550.25 514.952 553.048 517.75 556.5 517.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M561.5 511.5C561.5 514.261 559.261 516.5 556.5 516.5C553.739 516.5 551.5 514.261 551.5 511.5C551.5 508.739 553.739 506.5 556.5 506.5C559.261 506.5 561.5 508.739 561.5 511.5Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="23"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="23"
+            data-location="A site to A lobby"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="2"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Stand in the back corner, put top of the ^ on your tooltip at the end of the rounded triangle on the wall."
+          >
+            >
+            <path id="Line 1_20" d="M523 136L197.126 9.6684" stroke="#24A749" stroke-width="3" />
+            <circle id="Ellipse 1_34" cx="193" cy="8" r="6" fill="#2EDF60" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M529.5 146C533.642 146 537 142.642 537 138.5C537 134.358 533.642 131 529.5 131C525.358 131 522 134.358 522 138.5C522 142.642 525.358 146 529.5 146ZM529.5 144.75C532.952 144.75 535.75 141.952 535.75 138.5C535.75 135.048 532.952 132.25 529.5 132.25C526.048 132.25 523.25 135.048 523.25 138.5C523.25 141.952 526.048 144.75 529.5 144.75Z"
+              fill="#6468B9"
+            />
+            <path
+              d="M534.5 138.5C534.5 141.261 532.261 143.5 529.5 143.5C526.739 143.5 524.5 141.261 524.5 138.5C524.5 135.739 526.739 133.5 529.5 133.5C532.261 133.5 534.5 135.739 534.5 138.5Z"
+              fill="#6468B9"
+            />
+          </g>
         </svg>
       </Map>
     </div>

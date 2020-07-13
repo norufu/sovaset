@@ -6,6 +6,7 @@
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item class="navItems" @click="() => $router.push('About')" href="#">Contact</b-nav-item>
+        <b-nav-item class="navItems" @click="() => $router.push('Updates')" href="#">Updates</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>

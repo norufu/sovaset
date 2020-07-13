@@ -412,8 +412,19 @@ html {
   width: 100%;
   height: 100%;
 }
-
-.scaleDownRotate {
-  transform: scale(0.8) rotate(90deg);
+@media (max-width: 750px) {
+  .scaleDownRotate {
+    margin-top: 95px;
+    width: auto;
+    height: 100%;
+    transform: scale(0.8) rotate(90deg);
+  }
+}
+@media (min-width: 751px) {
+  .scaleDownRotate {
+    width: auto;
+    height: 100%;
+    transform: scale(0.8) rotate(90deg);
+  }
 }
 </style>

@@ -64,26 +64,50 @@ export default {
 </script>
 
 <style scoped>
-.sidebar {
-  position: absolute;
-  background: black;
-  /* border-right: 1px solid rgb(136, 136, 136); */
-  height: calc(100% - 56px);
-  width: 100px;
+@media (max-width: 750px) {
+  .sidebar {
+    position: absolute;
+    background: black;
+    /* border-right: 1px solid rgb(136, 136, 136); */
+    height: 100px;
+    width: 100%;
+  }
+  .sidebarList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding-left: 20px;
+    padding-top: 0px;
+    margin-top: 5px;
+  }
+  .sidebarLi {
+    padding-left: 20px;
+    cursor: pointer;
+  }
+}
+@media (min-width: 751px) {
+  .sidebar {
+    position: absolute;
+    background: black;
+    height: calc(100% - 56px);
+    width: 100px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+  .sidebarList {
+    padding-left: 0;
+    padding-top: 20px;
+    margin-top: 5px;
+  }
+  .sidebarLi {
+    padding-top: 20px;
+    cursor: pointer;
+  }
 }
 
-li {
-  list-style-type: none;
-}
-.sidebarList {
-  padding-left: 0;
-  padding-top: 20px;
-  margin-top: 5px;
-}
-.sidebarLi {
-  padding-top: 20px;
-  cursor: pointer;
-}
 #sonar {
   filter: invert(0.5) sepia(1) brightness(1) saturate(3) hue-rotate(90deg);
 }

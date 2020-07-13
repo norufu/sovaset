@@ -525,6 +525,239 @@
               fill="#6468B9"
             />
           </g>
+
+          <g
+            id="16"
+            v-if="filter == 'sonar' && sideFilter == 'ct'"
+            class="lineups"
+            data-id="16"
+            data-location="B site CT to mid"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="3"
+            data-side="ct"
+            data-difficulty="1"
+            data-instructions="Line up with the doorway, place the top left of the charge bar in the middle of the edge of the shadow."
+          >
+            <path id="Vector_61" d="M427.242 558.938L344 239" stroke="#24A749" stroke-width="3" />
+            <path
+              id="Vector_62"
+              d="M343 242C346.314 242 349 239.314 349 236C349 232.686 346.314 230 343 230C339.686 230 337 232.686 337 236C337 239.314 339.686 242 343 242Z"
+              fill="#2EDF60"
+            />
+
+            <path
+              id="Vector_63"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M429.5 573C433.642 573 437 569.642 437 565.5C437 561.358 433.642 558 429.5 558C425.358 558 422 561.358 422 565.5C422 569.642 425.358 573 429.5 573ZM429.5 571.75C432.952 571.75 435.75 568.952 435.75 565.5C435.75 562.048 432.952 559.25 429.5 559.25C426.048 559.25 423.25 562.048 423.25 565.5C423.25 568.952 426.048 571.75 429.5 571.75Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_64"
+              d="M434.5 565.5C434.5 568.261 432.261 570.5 429.5 570.5C426.739 570.5 424.5 568.261 424.5 565.5C424.5 562.739 426.739 560.5 429.5 560.5C432.261 560.5 434.5 562.739 434.5 565.5Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="17"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="17"
+            data-location="Showers to default"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Go to the corner of the wall in showers, aim a bit below the corner of the crack in the roof (not precise)."
+          >
+            <path id="Vector_65" d="M870 457L777 350" stroke="#24A749" stroke-width="3" />
+            <path
+              id="Vector_66"
+              d="M872 466C875.314 466 878 463.314 878 460C878 456.686 875.314 454 872 454C868.686 454 866 456.686 866 460C866 463.314 868.686 466 872 466Z"
+              fill="#2EDF60"
+            />
+            <path
+              id="Vector_67"
+              d="M772.5 340.5L777.5 345.5L772.5 350.5L767.5 345.5L772.5 340.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_68"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M772.5 353C776.642 353 780 349.642 780 345.5C780 341.358 776.642 338 772.5 338C768.358 338 765 341.358 765 345.5C765 349.642 768.358 353 772.5 353ZM772.5 351.75C775.952 351.75 778.75 348.952 778.75 345.5C778.75 342.048 775.952 339.25 772.5 339.25C769.048 339.25 766.25 342.048 766.25 345.5C766.25 348.952 769.048 351.75 772.5 351.75Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="18"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="18"
+            data-location="U haul to car plant"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Get stuck in the corner in U haul and put the right side of the left diamond aligned with the corner of the support on the roof."
+          >
+            <path
+              id="Vector_69"
+              d="M592 369C595.314 369 598 366.314 598 363C598 359.686 595.314 357 592 357C588.686 357 586 359.686 586 363C586 366.314 588.686 369 592 369Z"
+              fill="#2EDF60"
+            />
+            <path
+              id="Vector_70"
+              d="M710.5 352.5L715.5 357.5L710.5 362.5L705.5 357.5L710.5 352.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_71"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M710.5 365C714.642 365 718 361.642 718 357.5C718 353.358 714.642 350 710.5 350C706.358 350 703 353.358 703 357.5C703 361.642 706.358 365 710.5 365ZM710.5 363.75C713.952 363.75 716.75 360.952 716.75 357.5C716.75 354.048 713.952 351.25 710.5 351.25C707.048 351.25 704.25 354.048 704.25 357.5C704.25 360.952 707.048 363.75 710.5 363.75Z"
+              fill="#6468B9"
+            />
+            <path id="Vector_72" d="M704 357L596 363" stroke="#24A749" stroke-width="3" />
+          </g>
+
+          <g
+            id="19"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="19"
+            data-location="B long to long plant"
+            datatype="sonar"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Stand in the corner near the teleporter in long. Put the tip of the left ^ on your tooltip with the tip of the rose petal on the wall."
+          >
+            <path id="Vector_73" d="M155 462L271 318" stroke="#24A749" stroke-width="3" />
+            <path
+              id="Vector_74"
+              d="M153 471C156.314 471 159 468.314 159 465C159 461.686 156.314 459 153 459C149.686 459 147 461.686 147 465C147 468.314 149.686 471 153 471Z"
+              fill="#2EDF60"
+            />
+            <path
+              id="Vector_75"
+              d="M275.5 307.5L280.5 312.5L275.5 317.5L270.5 312.5L275.5 307.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_76"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M275.5 320C279.642 320 283 316.642 283 312.5C283 308.358 279.642 305 275.5 305C271.358 305 268 308.358 268 312.5C268 316.642 271.358 320 275.5 320ZM275.5 318.75C278.952 318.75 281.75 315.952 281.75 312.5C281.75 309.048 278.952 306.25 275.5 306.25C272.048 306.25 269.25 309.048 269.25 312.5C269.25 315.952 272.048 318.75 275.5 318.75Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="20"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="20"
+            data-location="B long to default"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Stand in the corner near the teleporter in long. There's a small indent in one of the rose petals on the wall, place the left ^ of your tooltip in this indent."
+          >
+            <path id="Vector_77" d="M156 462L313 316" stroke="#24A749" stroke-width="3" />
+            <path
+              id="Vector_78"
+              d="M153 471C156.314 471 159 468.314 159 465C159 461.686 156.314 459 153 459C149.686 459 147 461.686 147 465C147 468.314 149.686 471 153 471Z"
+              fill="#2EDF60"
+            />
+            <path
+              id="Vector_79"
+              d="M318.5 306.5L323.5 311.5L318.5 316.5L313.5 311.5L318.5 306.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_80"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M318.5 319C322.642 319 326 315.642 326 311.5C326 307.358 322.642 304 318.5 304C314.358 304 311 307.358 311 311.5C311 315.642 314.358 319 318.5 319ZM318.5 317.75C321.952 317.75 324.75 314.952 324.75 311.5C324.75 308.048 321.952 305.25 318.5 305.25C315.048 305.25 312.25 308.048 312.25 311.5C312.25 314.952 315.048 317.75 318.5 317.75Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="21"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="21"
+            data-location="U haul to long plant"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Line up with the shadow on the cable, put the top of the left diamond touching the bottom right corner of the roof."
+          >
+            <path id="Vector_81" d="M156 312L269 313" stroke="#24A749" stroke-width="3" />
+            <path
+              id="Vector_82"
+              d="M152 318C155.314 318 158 315.314 158 312C158 308.686 155.314 306 152 306C148.686 306 146 308.686 146 312C146 315.314 148.686 318 152 318Z"
+              fill="#2EDF60"
+            />
+            <path
+              id="Vector_83"
+              d="M275.5 307.5L280.5 312.5L275.5 317.5L270.5 312.5L275.5 307.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_84"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M275.5 320C279.642 320 283 316.642 283 312.5C283 308.358 279.642 305 275.5 305C271.358 305 268 308.358 268 312.5C268 316.642 271.358 320 275.5 320ZM275.5 318.75C278.952 318.75 281.75 315.952 281.75 312.5C281.75 309.048 278.952 306.25 275.5 306.25C272.048 306.25 269.25 309.048 269.25 312.5C269.25 315.952 272.048 318.75 275.5 318.75Z"
+              fill="#6468B9"
+            />
+          </g>
+
+          <g
+            id="22"
+            v-if="filter == 'shock' && sideFilter == 't'"
+            class="lineups"
+            data-id="22"
+            data-location="U haul to default"
+            datatype="shock"
+            data-bounces="0"
+            data-charge="1"
+            data-side="t"
+            data-difficulty="1"
+            data-instructions="Line up with the shadow on the cable, put the bottom of the left diamond touching the top left of the oddly shaped roof beam."
+          >
+            <path id="Vector_85" d="M157 312L312 311" stroke="#24A749" stroke-width="3" />
+            <path
+              id="Vector_86"
+              d="M152 318C155.314 318 158 315.314 158 312C158 308.686 155.314 306 152 306C148.686 306 146 308.686 146 312C146 315.314 148.686 318 152 318Z"
+              fill="#2EDF60"
+            />
+            <path
+              id="Vector_87"
+              d="M318.5 306.5L323.5 311.5L318.5 316.5L313.5 311.5L318.5 306.5Z"
+              fill="#6468B9"
+            />
+            <path
+              id="Vector_88"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M318.5 319C322.642 319 326 315.642 326 311.5C326 307.358 322.642 304 318.5 304C314.358 304 311 307.358 311 311.5C311 315.642 314.358 319 318.5 319ZM318.5 317.75C321.952 317.75 324.75 314.952 324.75 311.5C324.75 308.048 321.952 305.25 318.5 305.25C315.048 305.25 312.25 308.048 312.25 311.5C312.25 314.952 315.048 317.75 318.5 317.75Z"
+              fill="#6468B9"
+            />
+          </g>
+
           <defs>
             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
               <use xlink:href="#image0" transform="scale(0.000976562)" />
@@ -610,7 +843,19 @@ html {
   width: 100%;
   height: 100%;
 }
-.scaleDown {
-  transform: scale(0.8);
+@media (max-width: 750px) {
+  .scaleDown {
+    margin-top: 95px;
+    width: auto;
+    height: 100%;
+    transform: scale(0.8);
+  }
+}
+@media (min-width: 751px) {
+  .scaleDown {
+    width: auto;
+    height: 100%;
+    transform: scale(0.8);
+  }
 }
 </style>

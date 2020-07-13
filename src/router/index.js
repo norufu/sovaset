@@ -6,6 +6,7 @@ import Split from "@/views/Split.vue";
 import Haven from "@/views/Haven.vue";
 import Bind from "@/views/Bind.vue";
 import Ascent from "@/views/Ascent.vue";
+import Updates from "@/views/Updates.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,11 @@ const routes = [
     path: "/ascent",
     name: "Ascent",
     component: Ascent,
+  },
+  {
+    path: "/updates",
+    name: "Updates",
+    component: Updates,
   },
   {
     path: "/about",
