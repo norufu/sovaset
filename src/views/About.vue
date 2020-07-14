@@ -1,9 +1,7 @@
 <template>
   <div class="about">
     <div class="content">
-      <h1>
-        Contact
-      </h1>
+      <h1>Contact</h1>
       <p>
         This is just my collection of Sova arrows that I have learnt or come
         across. My current plan is to continue adding content as it is still a
@@ -15,7 +13,9 @@
       </p>
       <p>
         If you would like to support this, send me a message on
-        <a href="https://www.reddit.com/user/norufu">reddit</a> with any setups,
+        <a
+          href="https://www.reddit.com/user/norufu"
+        >reddit</a> with any setups,
         feature ideas, issues, or questions!
       </p>
     </div>
@@ -25,7 +25,7 @@
 <script>
 export default {
   name: "About",
-  methods: {},
+  methods: {}
 };
 </script>
 
@@ -36,18 +36,28 @@ export default {
   justify-items: center;
 }
 .content {
-  width: 50%;
+  width: 80%;
 }
 h1 {
   margin-top: 5%;
   color: whitesmoke;
   font-size: 50px;
 }
-p {
-  font-size: 20px;
-  margin-top: 20px;
-  color: whitesmoke;
+@media (max-width: 600px) {
+  p {
+    font-size: 12px;
+    margin-top: 20px;
+    color: whitesmoke;
+  }
 }
+@media (min-width: 601px) {
+  p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: whitesmoke;
+  }
+}
+
 a {
   color: red;
 }

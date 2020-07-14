@@ -415,9 +415,10 @@ html {
 @media (max-width: 750px) {
   .scaleDownRotate {
     margin-top: 95px;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     transform: scale(0.8) rotate(90deg);
+    top: 20%;
   }
 }
 @media (min-width: 751px) {

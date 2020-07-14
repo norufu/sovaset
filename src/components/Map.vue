@@ -38,14 +38,27 @@ export default {
 </script>
 
 <style scoped>
-#mapCompDiv {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+@media (max-width: 750px) {
+  #mapCompDiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
+@media (min-width: 751px) {
+  #mapCompDiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .mapParts {
   position: absolute;
   opacity: 1;

@@ -843,7 +843,7 @@ html {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
   .scaleDown {
     margin-top: 95px;
     width: auto;
@@ -857,5 +857,5 @@ html {
     height: 100%;
     transform: scale(0.8);
   }
-}
+} */
 </style>

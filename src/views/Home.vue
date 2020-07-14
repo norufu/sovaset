@@ -1,22 +1,13 @@
 <template>
   <div class="home">
-    <button
-      class="split mapButton"
-      @click="() => $router.push('Split')"
-    ></button>
-    <button
-      class="haven mapButton"
-      @click="() => $router.push('Haven')"
-    ></button>
+    <button class="split mapButton" @click="() => $router.push('Split')"></button>
+    <button class="haven mapButton" @click="() => $router.push('Haven')"></button>
     <button class="bind mapButton" @click="() => $router.push('Bind')"></button>
-    <button
-      class="ascent mapButton"
-      @click="() => $router.push('ascent')"
-    ></button>
+    <button class="ascent mapButton" @click="() => $router.push('ascent')"></button>
 
     <!-- <button class = "sova agentButton" ></button>
     <button class = "cypher agentButton" ></button>
-    <button class = "viper agentButton" ></button> -->
+    <button class = "viper agentButton" ></button>-->
   </div>
 </template>
 
@@ -25,7 +16,7 @@
 
 export default {
   name: "Home",
-  components: {},
+  components: {}
 };
 </script>
 
@@ -33,15 +24,30 @@ export default {
 .home {
   background-color: rgba(0, 0, 0, 0);
 }
-.mapButton {
-  background-size: 100%;
-  width: 600px;
-  height: 350px;
-  cursor: pointer;
-  margin: 30px;
-  border-radius: 5px;
-  border: 1px solid rgb(143, 143, 143);
+
+@media (max-width: 750px) {
+  .mapButton {
+    background-size: 100%;
+    width: 80%;
+    height: 205px;
+    cursor: pointer;
+    margin: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(143, 143, 143);
+  }
 }
+@media (min-width: 751px) {
+  .mapButton {
+    background-size: 100%;
+    width: 600px;
+    height: 350px;
+    cursor: pointer;
+    margin: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(143, 143, 143);
+  }
+}
+
 .split {
   background-image: url("../../public/UI/split_cover.png");
   background-size: cover;

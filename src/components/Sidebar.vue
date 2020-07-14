@@ -64,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+li {
+  list-style-type: none;
+}
 @media (max-width: 750px) {
   .sidebar {
     position: absolute;
@@ -92,10 +95,6 @@ export default {
     background: black;
     height: calc(100% - 56px);
     width: 100px;
-  }
-
-  li {
-    list-style-type: none;
   }
   .sidebarList {
     padding-left: 0;

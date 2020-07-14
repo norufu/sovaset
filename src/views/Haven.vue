@@ -374,7 +374,7 @@
             data-location="Mid window to B site"
             datatype="sonar"
             data-bounces="1"
-            data-charge="3"
+            data-charge="4"
             data-side="t"
             data-difficulty="1"
             data-instructions="Stand at the back wall of mid window and move till you can slightly see the second beam on the wall. Aim at the bottom of the hanging clothes and down from the 2nd small bump on the shadow."
@@ -575,7 +575,7 @@
             data-location="C site to grass"
             datatype="sonar"
             data-bounces="0"
-            data-charge="3"
+            data-charge="2"
             data-side="ct"
             data-difficulty="1"
             data-instructions="Line up so the box lines up with the end of the wall on c long. Line up the top left of the tooltip with the square on the wall."
@@ -859,9 +859,10 @@ html {
 @media (max-width: 750px) {
   .scaleDown {
     margin-top: 95px;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     transform: scale(0.8);
+    top: 20%;
   }
 }
 @media (min-width: 751px) {
